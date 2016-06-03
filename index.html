@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Your Age in Earth Years</title>
+    <style media="screen">
+
+      body {
+        background-color:black;
+        background-image:
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+        radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+        background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+        background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 3em;
+        color: white;
+      }
+
+      li {
+        color: white;
+        text-align: center;
+        list-style-type: none;
+        font-size: 2em;
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
+    </style>
+
+    <script>
+      window.onload = function() {
+
+      var ageSeconds = prompt("Please enter your age in seconds!");
+
+      var earthYears = ageSeconds / 31557600;
+      earthYears = earthYears.toFixed(2);
+      var mercuryYears = ageSeconds / 7600544;
+      mercuryYears = mercuryYears.toFixed(2);
+      var venusYears = ageSeconds / 19414149;
+      venusYears = venusYears.toFixed(2);
+      var marsYears = ageSeconds / 59354033;
+      marsYears = marsYears.toFixed(2);
+      var jupiterYears = ageSeconds / 374355659;
+      jupiterYears = jupiterYears.toFixed(2);
+      var saturnYears = ageSeconds / 929292363;
+      saturnYears = saturnYears.toFixed(2);
+      var uranusYears = ageSeconds / 2651370019;
+      uranusYears = uranusYears.toFixed(2);
+      var neptuneYears = ageSeconds / 5200418560;
+      neptuneYears = neptuneYears.toFixed(2);
+
+      document.getElementById("earth").innerHTML = 'Earth: ' + earthYears + ' earth years old';
+      document.getElementById("mercury").innerHTML = 'Mercury: ' + mercuryYears + ' earth years old';
+      document.getElementById("venus").innerHTML = 'Venus: ' + venusYears + ' earth years old';
+      document.getElementById("mars").innerHTML = 'Mars: ' + marsYears + ' earth years old';
+      document.getElementById("jupiter").innerHTML = 'Jupiter: ' + jupiterYears + ' earth years old';
+      document.getElementById("saturn").innerHTML = 'Saturn: ' + saturnYears + ' earth years old';
+      document.getElementById("uranus").innerHTML = 'Uranus: ' + uranusYears + ' earth years old';
+      document.getElementById("neptune").innerHTML = 'Neptune: ' + neptuneYears + ' earth years old';
+
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Your Age In Earth Years!</h1>
+    <ul>
+      <li id="earth"></li>
+      <li id="mercury"></li>
+      <li id="venus"></li>
+      <li id="mars"></li>
+      <li id="jupiter"></li>
+      <li id="saturn"></li>
+      <li id="uranus"></li>
+      <li id="neptune"></li>
+    </ul>
+  </body>
+</html>
